@@ -1,4 +1,3 @@
-
 /* Given an array of integers, return a new array such that each element
  * at index i of the new array is the product of all the numbers in the original
  * array except the one at i.
@@ -10,89 +9,37 @@
  * Follow-up: what if you can't use division?
  * */
 
-function withOutDivision(numbersArr) {
-  // Handling exception with [0]
-  if (numbersArr.length === 1 && numbersArr[0] === 0) return [0];
+function funcName(numbersArr) {
+  // Handling [] and [N]
+  if (numbersArr.length <= 1) return numbersArr;
 
-  return numbersArr.map(
-    (item, index, arr) =>
-      multiplyLeftSide(index, arr) * multiplyRightSide(index, arr)
-  );
+  let multFromLeft = multiplyFromLeft(numbersArr);
+  let multFromRight = multiplyFromRight(numbersArr);
 
-  function multiplyLeftSide(maxIndex, arr) {
-    return arr.reduce(
-      (accum, item, i) => (i < maxIndex ? accum * item : accum),
-      1
-    );
+  let result = [multFromRight[1]];
+
+  for (let i = 1, len = numbersArr.length - 1; i < len; i++) {
+    result.push(multFromLeft[i - 1] * multFromRight[i + 1]);
   }
 
-  function multiplyRightSide(minIndex, arr) {
-    return arr.reduce(
-      (accum, item, i) => (i > minIndex ? accum * item : accum),
-      1
-    );
-  }
-}
+  result.push(multFromLeft[multFromLeft.length - 2]);
 
-/* withDivision() function looks ugly,
- * but theoretically it works faster than withOutDivision()
- * */
+  return result;
 
-function withDivision(numbersArr) {
-  // Handling Exception with [0]
-  if (numbersArr.length === 1 && numbersArr[0] === 0) return [0];
-
-  // Skip algorithm if array has more than one zero
-  if (areThereMoreThanOneZero(numbersArr)) {
-    return new Array(numbersArr.length).fill(0);
-  }
-
-  let totalOfMultip = numbersArr.reduce((accum, current) => accum * current, 1);
-
-  return numbersArr.map(divideTotal);
-
-  function areThereMoreThanOneZero(numbersArr) {
-    let zeroCounter = 0;
-
-    for (let item of numbersArr) {
-      if (item === 0) {
-        zeroCounter++;
-        if (zeroCounter === 2) return true;
-      }
+  function multiplyFromLeft(arr) {
+    let result = [arr[0]];
+    for (let i = 1, l = arr.length; i < l; i++) {
+      result.push(result[i - 1] * arr[i]);
     }
-
-    return false;
+    return result;
   }
 
-  function divideTotal(num) {
-    if (num === 0) {
-      let newNum = 1;
-
-      // Handling zero
-      for (let item of numbersArr) {
-        if (item !== 0) newNum *= item;
-      }
-
-      return newNum;
-    } else {
-      return totalOfMultip / num;
+  function multiplyFromRight(arr) {
+    let len = arr.length - 1;
+    let result = [arr[len]];
+    for (let i = len; i > 0; i--) {
+      result.push(result[len - i] * arr[i - 1]);
     }
+    return result.reverse();
   }
-}
-
-/* BRUTEFORCE! */
-
-function bruteForce(numbersArr) {
-  // Handling Exception with [0]
-  if (numbersArr.length === 1 && numbersArr[0] === 0) return [0];
-
-  return numbersArr.map((num, i, arr) => {
-    let newNum = 1;
-
-    for (let j = 0, l = arr.length; j < l; j++) {
-      if (j !== i) newNum *= arr[j];
-    }
-
-    return newNum;
-  });
 }
