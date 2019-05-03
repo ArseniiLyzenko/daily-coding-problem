@@ -1,6 +1,13 @@
 # daily-coding-problem
 *My solutions(+tests) for [daily coding problems](https://dailycodingproblem.com/)*
 
+[#1](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%231/index.js), 
+[#2](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%232/index.js), 
+[#3](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%233/index.js), 
+[#4](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%234/index.js), 
+[#5](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%235/index.js), 
+[#7](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%237/index.js), 
+
 ### [#1](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%231/index.js)
 > Given a list of numbers and a number k,  
 > return whether any two numbers from the list add up to k.  
@@ -63,3 +70,11 @@
 >   return pair
 >```
 > Implement car and cdr.
+
+### [#7](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%237/index.js)
+> Given the mapping a = 1, b = 2, ... z = 26, and an encoded message, count the number of ways it can be decoded.
+> 
+> For example, the message '111' would give 3, since it could be decoded as 'aaa', 'ka', and 'ak'.
+> 
+> You can assume that the messages are decodable. For example, '001' is not allowed.
+
