@@ -21,58 +21,32 @@ function Node(value, left = null, right = null) {
   this.right = right;
 }
 
-function isUnivalTree(root) {
-  if (!root)
-    return true;
-
-  if (root.left && root.left.value !== root.value)
-    return false;
-  if (root.right && root.right.value !== root.value)
-    return false;
-
-  return isUnivalTree(root.left) && isUnivalTree(root.right);
-}
-
 function countUnivalSubTrees(root) {
-  if (!root)
-    return 0;
-
-  let total = countUnivalSubTrees(root.left) + countUnivalSubTrees(root.right);
-
-  if (isUnivalTree(root))
-    total++;
-
-  return total;
+  return countUnivalSubTreesHelper(root).counter;
 }
 
-let isUnivalTree1 = new Node(0);
+function countUnivalSubTreesHelper(root) {
+  if (!root)
+    return {counter: 0, isUnival: true};
 
-let isUnivalTree2 = new Node(
-  1,
-  new Node(1)
-);
+  let leftTree = countUnivalSubTreesHelper(root.left);
+  let rightTree = countUnivalSubTreesHelper(root.right);
 
-let isUnivalTree3 = new Node(
-  1,
-  new Node(1),
-  new Node(1)
-);
+  let total = leftTree.counter + rightTree.counter;
 
-let isUnivalTree4 = new Node(
-  1,
-  new Node(0),
-  new Node(1)
-);
+  if (leftTree.isUnival && rightTree.isUnival) {
 
-let isUnivalTree5 = new Node(
-  1,
-  new Node(1,
-    new Node(1)),
-  new Node(1,
-    null,
-    new Node(1))
-);
+    if (root.left && root.value !== root.left.value)
+      return {counter: total, isUnival: false};
+    if (root.right && root.value !== root.right.value)
+      return {counter: total, isUnival: false};
 
+    return {counter: total + 1, isUnival: true}
+  }
+  return {counter: total, isUnival: false};
+}
+
+// Trees for tests
 let tree1 = new Node(
   0,
   new Node(1),
