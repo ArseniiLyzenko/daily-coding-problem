@@ -79,27 +79,15 @@ function funcName(cipher = "") {
     .reduce((acc, item) => acc * item);
 }
 
-function fibonacci(fibArrIndex) {
-  let mem = [];
-  return fibonacciHelper(fibArrIndex, mem);
-}
-
-/*
- * 'mem' is needed to accelerate performance,
- * because pure recursive is slow for large inputs (i.e > 40)
- * */
-function fibonacciHelper(fibArrIndex, mem) {
-  if (fibArrIndex === 0)
-    return 0;
-
-  if (fibArrIndex === 1 || fibArrIndex === 2)
-    return 1;
-
-  if (mem[fibArrIndex])
-    return mem[fibArrIndex];
-
-  return mem[fibArrIndex] =
-    fibonacciHelper(fibArrIndex - 1, mem) + fibonacciHelper(fibArrIndex - 2, mem);
+function fibonacci(fibIndex) {
+  let current = 0;
+  let next = 1;
+  for (let i = 0; i < fibIndex; i++) {
+    let temp = next;
+    next = current + next;
+    current = temp;
+  }
+  return current;
 }
 
 function encrypt(msg) {
