@@ -7,6 +7,7 @@
 [#4](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%234/index.js), 
 [#5](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%235/index.js), 
 [#7](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%237/index.js), 
+[#8](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%238/index.js), 
 
 ### [#1](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%231/index.js)
 > Given a list of numbers and a number k,  
@@ -78,3 +79,11 @@
 > 
 > You can assume that the messages are decodable. For example, '001' is not allowed.
 
+### [#8](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%238/index.js)  
+> A unival tree (which stands for "universal value") is a tree where all nodes under it have the same value.  
+> 
+> Given the root to a binary tree, count the number of unival subtrees.
+> 
+> For example, the following tree has 5 unival subtrees:
+> 
+> ![Tree](https://user-images.githubusercontent.com/8843033/57275634-1e15c480-706d-11e9-9fee-4b862da48bcf.png)
