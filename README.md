@@ -9,6 +9,7 @@
 [#7](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%237/index.js), 
 [#8](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%238/index.js), 
 [#10](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2310/index.js), 
+[#11](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2311/index.js), 
 
 ### [#1](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%231/index.js)
 > Given a list of numbers and a number k,  
@@ -91,3 +92,10 @@
 
 ### [#10](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2310/index.js)  
 > Implement a job scheduler which takes in a function f and an integer n, and calls f after n milliseconds.
+
+### [#11](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2311/index.js)  
+> Implement an autocomplete system. That is, given a query string s and a set of all possible query strings, return all strings in the set that have s asa prefix.  
+> 
+> For example, given the query string de and the set of strings [dog, deer, deal], return [deer, deal].  
+> 
+> Hint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.
