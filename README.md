@@ -11,6 +11,7 @@
 [#10](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2310/index.js), 
 [#11](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2311/index.js), 
 [#12](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2312/index.js), 
+[#13](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2313/index.js), 
 
 ### [#1](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%231/index.js)
 > Given a list of numbers and a number k,  
@@ -112,3 +113,8 @@
 > 2, 2  
 >  
 > What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X? For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
+
+### [#13](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2313/index.js)  
+> Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.  
+> 
+> For example, given s = "abcba" and k = 2, the longest substring with k distinct characters is "bcb".
