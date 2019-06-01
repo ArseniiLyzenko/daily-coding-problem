@@ -12,6 +12,7 @@
 [#11](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2311/index.js), 
 [#12](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2312/index.js), 
 [#13](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2313/index.js), 
+[#14](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2314/index.js), 
 
 ### [#1](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%231/index.js)
 > Given a list of numbers and a number k, return whether any two numbers from the list add up to k.  
@@ -105,3 +106,8 @@
 > Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.  
 > 
 > For example, given s = "abcba" and k = 2, the longest substring with k distinct characters is "bcb".
+
+### [#14](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2314/index.js)  
+> The area of a circle is defined as πr^2. Estimate π to 3 decimal places using a Monte Carlo method.
+> 
+> Hint: The basic equation of a circle is x^2 + y^2 = r^2.
