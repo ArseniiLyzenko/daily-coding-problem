@@ -13,6 +13,7 @@
 [#12](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2312/index.js), 
 [#13](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2313/index.js), 
 [#14](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2314/index.js), 
+[#16](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2316/index.js), 
 
 ### [#1](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%231/index.js)
 > Given a list of numbers and a number k, return whether any two numbers from the list add up to k.  
@@ -111,3 +112,11 @@
 > The area of a circle is defined as πr^2. Estimate π to 3 decimal places using a Monte Carlo method.
 > 
 > Hint: The basic equation of a circle is x^2 + y^2 = r^2.
+
+### [#16](https://github.com/PticaGovorun/daily-coding-problem/blob/master/%2316/index.js)  
+> You run an e-commerce website and want to record the last N order ids in a log. Implement a data structure to accomplish this, with the following API:  
+> 
+> record(order_id): adds the order_id to the log  
+> get_last(i): gets the ith last element from the log. i is guaranteed to be smaller than or equal to N.  
+> 
+> You should be as efficient with time and space as possible.
